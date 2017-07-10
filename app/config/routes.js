@@ -7,6 +7,23 @@ import Likes from "../components/Likes";
 import Dislikes from "../components/Dislikes";
 import Deal from "../components/Deal";
 
+//Create Main Component
+class App extends React.Component {
+	constructor(){
+		super();
+		this.state = {
+
+		}
+	}
+	render() {
+		return (
+			<div className="container">
+			<div>
+				<div>
+			)
+	}
+}
+
 const routes = (
   <Router history={browserHistory}>
     <Route path="/" component={Main}>
