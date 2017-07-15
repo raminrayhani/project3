@@ -1,21 +1,13 @@
-var React = require("react");
-var Home = require("./Home");
+import React from "react";
+import Nav from "/Nav";
+import Footer from "/Footer";
 
-var Main = React.createClass({
-  getInitialState: function() {
-    return {
-      
-    };
-  },
+const Main = props => (
+  <div>
+    <Nav />
+    {props.children}
+    <Footer />
+  </div>
+);
 
-  render: function() {
-    return (
-      <div className="container">
-        <div className="row">
-        </div>
-      </div>
-    );
-  }
-});
-
-module.exports = Main;
+export default Main;
