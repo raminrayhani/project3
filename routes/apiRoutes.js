@@ -1,11 +1,11 @@
 var express = require("express");
 
-var quotesController = require("../controllers/itemsController");
+var itemsController = require("../controllers/itemsController");
 
 var router = new express.Router();
 
 // Get all items (or optionally a specific item with an id)
-router.get("/times/:id?", itemsController.index);
+router.get("/items/:id?", itemsController.index);
 // Create a new item using data passed in req.body
 router.post("/items", itemsController.create);
 // Update an existing item with a speicified id param, using data in req.body
