@@ -7,7 +7,7 @@ var BUNDLE = path.resolve(__dirname, "bundle");
 var config = {
   entry: APP + "/app.js",
   output: {
-    path: OUTPUT,
+    path: BUNDLE,
     filename: "bundle.js"
   },
   module: {
