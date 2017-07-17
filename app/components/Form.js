@@ -51,3 +51,5 @@ var EmailField = React.createClass({
     )
   }
 });
+
+export default Form;
