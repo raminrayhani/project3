@@ -1,3 +1,5 @@
+import React from "react";
+
 var NameField = React.createClass({
   getInitialState: function() {
     return {
