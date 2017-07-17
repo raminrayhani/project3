@@ -8,28 +8,34 @@ import Dislikes from "../components/Dislikes";
 import Deal from "../components/Deal";
 
 //Create Main Component
-class App extends React.Component {
-	constructor(){
-		super();
-		this.state = {
+// class App extends React.Component {
+// 	constructor(){
+// 		super();
+// 		this.state = {
 
-		}
-	}
-	render() {
-		return (
-			<div className="container">
-			<div>
-				<div>
-			)
-	}
-}
-
+// 		}
+// 	}
+// 	render() {
+// 		return (
+// 			<div className="container">
+// 			</div>
+// 			)
+// 	}
+// }
+/*
 const routes = (
   <Router history={browserHistory}>
     <Route path="/" component={Main}>
     <Route path="likes" component={Likes} />
     <Route path="dislikes" component={Dislikes} />
     <Route path="deal" component={Deal} />
+    <IndexRoute component={Home} />
+    </Route>
+  </Router>
+);*/
+const routes = (
+  <Router history={browserHistory}>
+    <Route path="/" component={Main}>
     <IndexRoute component={Home} />
     </Route>
   </Router>

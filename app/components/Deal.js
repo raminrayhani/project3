@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Panel from "/Panel";
+import Panel from "./Panel";
 import API from "../utils/API";
 
 class Deal extends Component {

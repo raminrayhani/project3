@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import API from "../../utils/API";
+import API from "../utils/API";
 
 class Panel extends Component {
   // liked Item toggles a item's like status in the db and then
@@ -20,7 +20,6 @@ class Panel extends Component {
             <i
               onClick={() => this.likeItem(this.props.item)}
               style={styles.likeStyle}
-              className={this.props.item.liked ? "fa fa-thumbs-o-up"}
               aria-hidden="true"
             />
             <i
@@ -53,3 +52,4 @@ const styles = {
 };
 
 export default Panel;
+//className={this.props.item.liked ? "fa fa-thumbs-o-up"}

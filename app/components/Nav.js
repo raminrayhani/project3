@@ -5,7 +5,7 @@ const Nav = () => (
   <nav style={{ marginBottom: 0 }} className="navbar navbar-inverse">
     <div className="container-fluid">
       <div className="navbar-header">
-        <Link className="navbar-brand" to="/">Buy Stuff</Link>
+        <Link className="navbar-brand" to="/">Buy random stuff</Link>
       </div>
       <ul className="nav navbar-nav">
         <li className={location.pathname === "/" && "active"}>
