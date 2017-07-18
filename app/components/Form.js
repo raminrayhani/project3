@@ -33,7 +33,7 @@ class ItemForm extends Component {
             }}
             onChange={this.handleInputChange}
             value={this.state.inputValue}
-            placeholder="Add a new quote here!"
+            placeholder="Add a new item here!"
             className="form-control"
             id="input-box"
             rows="3"
