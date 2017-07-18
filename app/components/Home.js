@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Panel from "/Panel";
-import QuoteForm from "/Form";
+import Panel from "./Panel";
+import QuoteForm from "./Form";
 import API from "../utils/API";
 
 class Home extends Component {
