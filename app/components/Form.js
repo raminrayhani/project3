@@ -40,4 +40,4 @@ class Form extends React.Component {
   }
 }
 
-export default ItemForm;
+export default Form;
