@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Panel from "./Panel";
-import QuoteForm from "./Form";
+import ItemForm from "./Form";
 import API from "../utils/API";
 
 class Home extends Component {
@@ -24,7 +24,7 @@ class Home extends Component {
   }
   // A helper method for rendering one panel for each item
   renderItems() {
-    return this.state.quotes.map(item => (
+    return this.state.items.map(item => (
       <Panel
         item={item}
         key={item._id}
