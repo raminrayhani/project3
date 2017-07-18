@@ -36,7 +36,7 @@ class Home extends Component {
     return (
       <div className="container">
         <div className="row">
-          <Form
+          <ItemForm
             getItems={this.getItems}
           />
         </div>
