@@ -1,4 +1,4 @@
-var Quote = require("../models/item");
+var Item = require("../models/item");
 
 module.exports = {
   // This method handles retrieving quotes from the db
