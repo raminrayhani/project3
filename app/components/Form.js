@@ -1,43 +1,77 @@
-import React from "react";
+import React, { Component } from "react";
 import API from "../utils/API";
 
-class Form extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {value: ''};
+class Form extends Component {
+    constructor() {
+        super();
+        this.state = {inputValue: ''};
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleButtonClick = this.handleButtonClick.bind(this);
     }
 
-    handleChange(event) {
-        this.setState({value: event.target.value});
+    handleInputChange(event) {
+        this.setState({inputValue: event.target.value});
     }
 
-    handleSubmit(event) {
-        alert('A product was submitted: ' + this.state.value);
-        event.preventDefault();
+    handleButtonClick(event) {
+        const newItem = this.state.inputValue;
+        API.saveItem(newItem).then(this.props.getItems);
+        this.setState({ inputValue: "" });
     }
 
  render(){
     return(
-      <form onSubmit={this.handleSubmit}>
-        <label>
+      <div className="col-md-6 col-md-offset-3">
+        <div style={styles.formStyle} className="form-group">
+          <label htmlFor="input-box">
             Product Name:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <label>
-            Product Description:
-            <textarea value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <label>
+            <input type="text" value={this.state.value} onChange={this.handleInputChange} />
+          </label>
+
+          <label>
             Product Image:
             <input type="file" accept="image/*"/>
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+          </label>
+
+          <textarea
+            style={{
+              resize: "none"
+            }}
+            onChange={this.handleInputChange}
+            value={this.state.inputValue}
+            placeholder="Product description"
+            className="form-control"
+            id="input-box"
+            rows="3"
+          />
+          <button
+            onClick={this.handleButtonClick}
+            className="btn btn-success"
+            style={styles.buttonStyle}
+          >
+            Submit
+          </button>
+        </div>
+      </div>  
+
+
+
+
+      
     );
   }
 }
+
+const styles = {
+  buttonStyle: {
+    float: "right",
+    marginTop: 10
+  },
+  formStyle: {
+    marginBottom: 60,
+    marginTop: 60
+  }
+};
 
 export default Form;
