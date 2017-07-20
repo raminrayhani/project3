@@ -4,12 +4,14 @@ import API from "../utils/API";
 class Form extends Component {
     constructor() {
         super();
+
         this.state = 
             {
                 name: "",
                 description: "",
                 imageUrl: ""
             };
+
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -32,6 +34,7 @@ class Form extends Component {
             .catch((err)=>{
                 console.log('Issue saving item', err);
             });
+
         this.setState({ inputValue: "" });
     }
 
@@ -42,11 +45,13 @@ class Form extends Component {
           <label htmlFor="input-box">
             Product Name:
             <input type="text" value={this.state.name} name="name" onChange={this.handleInputChange} />
+
           </label>
 
           <label>
             Product Image:
             <input type="text" name="imageUrl" value={this.state.imageUrl} onChange={this.handleInputChange}/>
+
           </label>
 
           <textarea
@@ -70,8 +75,6 @@ class Form extends Component {
           </button>
         </div>
       </div>  
-
-
     );
   }
 }
