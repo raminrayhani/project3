@@ -17,6 +17,7 @@ class Panel extends Component {
       <div className="col-md-3 col-sm-6">
         <div className="panel panel-default">
           <div className="panel-body">
+            <image src={this.props.item.imageUrl} />
             <i
               onClick={() => this.likeItem(this.props.item)}
               style={styles.likeStyle}
@@ -28,7 +29,11 @@ class Panel extends Component {
               className="fa fa-thumbs-o-down"
               aria-hidden="true"
             />
-            {this.props.item.text}
+
+            {this.props.item.name}
+
+            {this.props.item.description}
+
           </div>
         </div>
       </div>

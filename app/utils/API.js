@@ -9,8 +9,8 @@ const API = {
 	},
 
 	// Saves a new item to the db
-	saveItem: function(text) {
-		return axios.post("/api/items", { text });
+	saveItem: function(newItem) {
+		return axios.post("/api/items", newItem);
 	},
 
 	// Toggles an item's Like property in the db
